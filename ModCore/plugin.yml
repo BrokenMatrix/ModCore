@@ -1,0 +1,15 @@
+main: com.brokenmatrix.modcore.ModCore
+name: ModCore
+version: 0.0.0
+author: zantanj
+description: Used for creating plugins that act like mods, originaly created for Coacoa Magic.
+
+commands:
+  modcore:
+    description: The base mod core command.
+    aliases: mc
+    useage: /mc <arguments>
+permissions:
+  modcore.give:
+    description: Allows you to do /mc give <player> <item> <amount>
+    defualt: op
