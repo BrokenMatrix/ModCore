@@ -9,17 +9,17 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
 
 import com.brokenmatrix.modcore.items.CustomBlockItem;
-import com.brokenmatrix.modcore.items.drops.CustomDrop;
+import com.brokenmatrix.modcore.items.drops.ICustomDrop;
 
 public class CustomBlock
 {
 	private String name;
 	private Material material;
 	private int id = -1;
-	private CustomDrop[] drops;
+	private ICustomDrop[] drops;
 	private CustomBlockItem item;
 	
-	public CustomBlock(String name, Material material, CustomDrop... drops)
+	public CustomBlock(String name, Material material, ICustomDrop... drops)
 	{
 		if (!material.isBlock())
 		{
@@ -70,7 +70,7 @@ public class CustomBlock
 		
 		List<ItemStack> customDrops = new ArrayList<ItemStack>();
 		
-		for (CustomDrop drop : drops)
+		for (ICustomDrop drop : drops)
 		{
 			ItemStack item = drop.getItemStack();
 			

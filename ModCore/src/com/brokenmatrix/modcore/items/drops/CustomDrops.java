@@ -10,32 +10,32 @@ import org.bukkit.inventory.ItemStack;
 
 public final class CustomDrops
 {
-	private static HashMap<EntityType, List<CustomDrop>> EntityDrops;
-	private static HashMap<Material, List<CustomDrop>> BlockDrops;
+	private static HashMap<EntityType, List<ICustomDrop>> EntityDrops;
+	private static HashMap<Material, List<ICustomDrop>> BlockDrops;
 	
 	static
 	{
-		EntityDrops = new HashMap<EntityType, List<CustomDrop>>();
-		BlockDrops = new HashMap<Material, List<CustomDrop>>();
+		EntityDrops = new HashMap<EntityType, List<ICustomDrop>>();
+		BlockDrops = new HashMap<Material, List<ICustomDrop>>();
 	}
 	
-	public static void Register(EntityType entity, CustomDrop drop)
+	public static void Register(EntityType entity, ICustomDrop drop)
 	{
 		if (!EntityDrops.containsKey(entity))
 		{
-			EntityDrops.put(entity, new ArrayList<CustomDrop>());
+			EntityDrops.put(entity, new ArrayList<ICustomDrop>());
 		}
 		
 		EntityDrops.get(entity).add(drop);
 	}
 	
-	public static void Register(Material block, CustomDrop drop)
+	public static void Register(Material block, ICustomDrop drop)
 	{
 		if (block.isBlock())
 		{
 			if (!BlockDrops.containsKey(block))
 			{
-				BlockDrops.put(block, new ArrayList<CustomDrop>());
+				BlockDrops.put(block, new ArrayList<ICustomDrop>());
 			}
 			
 			BlockDrops.get(block).add(drop);
@@ -44,14 +44,14 @@ public final class CustomDrops
 	
 	public static List<ItemStack> GetDrops(EntityType entity)
 	{
-		List<CustomDrop> customDrops = EntityDrops.get(entity);
+		List<ICustomDrop> customDrops = EntityDrops.get(entity);
 		if (customDrops == null)
 		{
 			return null;
 		}
 		
 		List<ItemStack> drops = new ArrayList<ItemStack>();
-		for (CustomDrop drop : customDrops)
+		for (ICustomDrop drop : customDrops)
 		{
 			ItemStack item = drop.getItemStack();
 			if (item == null)
@@ -67,14 +67,14 @@ public final class CustomDrops
 	
 	public static List<ItemStack> GetDrops(Material block)
 	{
-		List<CustomDrop> customDrops = BlockDrops.get(block);
+		List<ICustomDrop> customDrops = BlockDrops.get(block);
 		if (customDrops == null)
 		{
 			return null;
 		}
 		
 		List<ItemStack> drops = new ArrayList<ItemStack>();
-		for (CustomDrop drop : customDrops)
+		for (ICustomDrop drop : customDrops)
 		{
 			ItemStack item = drop.getItemStack();
 			if (item == null)

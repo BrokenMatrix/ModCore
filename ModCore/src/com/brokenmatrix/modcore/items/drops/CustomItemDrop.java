@@ -4,7 +4,7 @@ import org.bukkit.inventory.ItemStack;
 
 import com.brokenmatrix.modcore.items.CustomItem;
 
-public class CustomItemDrop implements CustomDrop
+public class CustomItemDrop implements ICustomDrop
 {
 	private CustomItem item;
 	private int amount;

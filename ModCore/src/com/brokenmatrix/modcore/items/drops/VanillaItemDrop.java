@@ -2,7 +2,7 @@ package com.brokenmatrix.modcore.items.drops;
 
 import org.bukkit.inventory.ItemStack;
 
-public class VanillaItemDrop implements CustomDrop
+public class VanillaItemDrop implements ICustomDrop
 {
 	private ItemStack item;
 	

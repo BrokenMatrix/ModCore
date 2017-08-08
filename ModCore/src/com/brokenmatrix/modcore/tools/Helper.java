@@ -80,6 +80,11 @@ public final class Helper
 		return Random.nextInt(cap + 1);
 	}
 	
+	public static float NextFloat()
+	{
+		return Random.nextFloat();
+	}
+	
 	public static CustomItem GetItem(ItemStack from)
 	{
 		if (from.hasItemMeta())
