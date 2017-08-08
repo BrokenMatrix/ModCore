@@ -12,7 +12,7 @@ public class CustomColorableBlock extends CustomBlock
 {
 	private DyeColor color;
 	
-	public CustomColorableBlock(String name, Material material, DyeColor color, CustomDrop[] drops)
+	public CustomColorableBlock(String name, Material material, DyeColor color, CustomDrop... drops)
 	{
 		super(name, material, drops);
 	}

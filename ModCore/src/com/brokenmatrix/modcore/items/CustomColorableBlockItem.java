@@ -12,12 +12,12 @@ public class CustomColorableBlockItem extends CustomBlockItem
 {
 	private DyeColor color;
 	
-	public CustomColorableBlockItem(String name, Material base, DyeColor color, CustomBlock block, boolean dropsSelf, int maxStackSize, String[] lore)
+	public CustomColorableBlockItem(String name, Material base, DyeColor color, CustomBlock block, boolean dropsSelf, int maxStackSize, String... lore)
 	{
 		super(name, base, block, dropsSelf, maxStackSize, lore);
 	}
 	
-	public CustomColorableBlockItem(String name, Material base, DyeColor color, CustomBlock block, boolean dropsSelf, String[] lore)
+	public CustomColorableBlockItem(String name, Material base, DyeColor color, CustomBlock block, boolean dropsSelf, String... lore)
 	{
 		this(name, base, color, block, dropsSelf, 1, lore);
 	}
