@@ -6,7 +6,7 @@ import com.brokenmatrix.modcore.blocks.CustomBlock;
 
 public class CustomBlockItem extends CustomItem
 {
-	private CustomBlock block;
+	protected CustomBlock block;
 	
 	public CustomBlockItem(String name, Material base, CustomBlock block, boolean dropsSelf, int maxStackSize, String... lore)
 	{

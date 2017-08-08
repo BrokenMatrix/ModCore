@@ -13,10 +13,10 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class CustomItem
 {
-	private List<String> lore;
-	private String name;
-	private Material base;
-	private int maxStackSize;
+	protected List<String> lore;
+	protected String name;
+	protected Material base;
+	protected int maxStackSize;
 	
 	public CustomItem(String name, Material base, int maxStackSize, String... lore)
 	{
