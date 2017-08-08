@@ -4,22 +4,20 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import com.brokenmatrix.modcore.blocks.CustomBlock;
-
-public class CustomColorableBlockItem extends CustomBlockItem
+public class CustomColorableItem extends CustomItem
 {
 	private byte color;
 	
-	public CustomColorableBlockItem(String name, Material base, byte color, CustomBlock block, boolean dropsSelf, int maxStackSize, String... lore)
+	public CustomColorableItem(String name, Material base, byte color, int maxStackSize, String... lore)
 	{
-		super(name, base, block, dropsSelf, maxStackSize, lore);
+		super(name, base, maxStackSize, lore);
 		
 		this.color = color;
 	}
 	
-	public CustomColorableBlockItem(String name, Material base, byte color, CustomBlock block, boolean dropsSelf, String... lore)
+	public CustomColorableItem(String name, Material base, byte color, String... lore)
 	{
-		this(name, base, color, block, dropsSelf, 64, lore);
+		this(name, base, color, 1, lore);
 	}
 	
 	@SuppressWarnings("deprecation")
