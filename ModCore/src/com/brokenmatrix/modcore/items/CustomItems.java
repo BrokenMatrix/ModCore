@@ -22,7 +22,7 @@ public final class CustomItems extends Spigot
 		if (!Items.containsKey(item.getName()))
 		{
 			Items.put(item.getName(), item);
-			NoneToColor.put(Helper.WithoutColorsAndSpaces(item.getName()), item.getName());
+			NoneToColor.put(Helper.WithoutColorsAndSpaces(item.getName()).toLowerCase(), item.getName());
 		}
 		else
 		{
@@ -37,6 +37,6 @@ public final class CustomItems extends Spigot
 	
 	public static CustomItem GetItemUnsafe(String item)
 	{
-		return Items.get(NoneToColor.get(item));
+		return Items.get(NoneToColor.get(item.toLowerCase()));
 	}
 }

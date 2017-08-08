@@ -53,7 +53,7 @@ public class CommandModCore implements CommandExecutor
 							{
 								int amount = Integer.parseInt(args[3]);
 								
-								if (amount <= 0)
+								if (amount > 0)
 								{
 									player.getInventory().addItem(item.getItemStack(amount));
 									
