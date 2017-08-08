@@ -1,6 +1,6 @@
 main: com.brokenmatrix.modcore.ModCore
 name: ModCore
-version: 0.0.11
+version: 0.0.12
 author: zantanj
 description: Used for creating plugins that act like mods, originaly created for Coacoa Magic.
 

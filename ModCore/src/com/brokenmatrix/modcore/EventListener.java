@@ -155,7 +155,10 @@ public class EventListener implements Listener
 			{
 				CustomItem item = Helper.GetItem(holding);
 				
-				item.onKilledEntity(e);
+				if (item != null)
+				{
+					item.onKilledEntity(e);
+				}
 			}
 		}
 		
