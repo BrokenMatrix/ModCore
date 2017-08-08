@@ -66,11 +66,14 @@ public class CommandModCore implements CommandExecutor
 			
 			for (ItemStack s : inventory.getStorageContents())
 			{
-				CustomItem i = Helper.GetItem(s);
-				
-				if (i != null)
+				if (s != null)
 				{
-					inventory.addItem(i.getItemStack(s.getAmount()));
+					CustomItem i = Helper.GetItem(s);
+					
+					if (i != null)
+					{
+						inventory.addItem(i.getItemStack(s.getAmount()));
+					}
 				}
 			}
 			
