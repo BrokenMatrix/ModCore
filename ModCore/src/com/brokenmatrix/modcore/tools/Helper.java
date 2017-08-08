@@ -58,7 +58,7 @@ public final class Helper
 				continue;
 			}
 			
-			if (c == '&')
+			if (c == '§')
 			{
 				skip = true;
 				continue;

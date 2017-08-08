@@ -32,6 +32,7 @@ public class CustomColorableBlockItem extends CustomBlockItem
 			Colorable c = (Colorable) data;
 			c.setColor(color);
 		}
+		stack.setData(data);
 		
 		return stack;
 	}

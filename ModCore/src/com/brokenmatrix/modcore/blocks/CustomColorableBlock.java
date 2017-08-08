@@ -2,6 +2,7 @@ package com.brokenmatrix.modcore.blocks;
 
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
+import org.bukkit.block.BlockState;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.material.Colorable;
 import org.bukkit.material.MaterialData;
@@ -20,11 +21,13 @@ public class CustomColorableBlock extends CustomBlock
 	@Override
 	public void onPlace(BlockPlaceEvent e)
 	{
-		MaterialData state = e.getPlayer().getWorld().getBlockAt(e.getBlock().getLocation()).getState().getData();
-		if (state instanceof Colorable)
+		BlockState state = e.getPlayer().getWorld().getBlockAt(e.getBlock().getLocation()).getState();
+		MaterialData data = state.getData();
+		if (data instanceof Colorable)
 		{
-			Colorable c = (Colorable) state;
+			Colorable c = (Colorable) data;
 			c.setColor(color);
 		}
+		state.setData(data);
 	}
 }
