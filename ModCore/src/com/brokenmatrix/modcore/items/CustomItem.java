@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class CustomItem
 {
@@ -52,8 +53,10 @@ public class CustomItem
 		
 		ItemStack stack = new ItemStack(base, cutAmount);
 		
-		stack.getItemMeta().setLore(lore);
-		stack.getItemMeta().setDisplayName(name);
+		ItemMeta meta = stack.getItemMeta();
+		meta.setLore(lore);
+		meta.setDisplayName(name);
+		stack.setItemMeta(meta);
 		
 		return stack;
 	}
