@@ -8,7 +8,7 @@ public class CustomBlockItem extends CustomItem
 {
 	private CustomBlock block;
 	
-	public CustomBlockItem(String name, Material base, CustomBlock block, boolean dropsSelf, int maxStackSize, String[] lore)
+	public CustomBlockItem(String name, Material base, CustomBlock block, boolean dropsSelf, int maxStackSize, String... lore)
 	{
 		super(name, base, maxStackSize, lore);
 		
@@ -16,7 +16,7 @@ public class CustomBlockItem extends CustomItem
 		this.block.setPlacer(this);
 	}
 	
-	public CustomBlockItem(String name, Material base, CustomBlock block, boolean dropsSelf, String[] lore)
+	public CustomBlockItem(String name, Material base, CustomBlock block, boolean dropsSelf, String... lore)
 	{
 		this(name, base, block, dropsSelf, 1, lore);
 	}
