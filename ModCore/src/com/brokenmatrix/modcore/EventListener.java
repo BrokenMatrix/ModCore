@@ -6,7 +6,7 @@ import org.bukkit.event.player.PlayerItemBreakEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 
-import com.brokenmatrix.modcore.blocks.Blocks;
+import com.brokenmatrix.modcore.blocks.CustomBlocks;
 import com.brokenmatrix.modcore.blocks.CustomBlock;
 import com.brokenmatrix.modcore.items.CustomBlockItem;
 import com.brokenmatrix.modcore.items.CustomItem;
@@ -106,7 +106,7 @@ public class EventListener implements Listener
 				
 				if (customBlock > -1)
 				{
-					CustomBlock block = Blocks.GetBlock(customBlock);
+					CustomBlock block = CustomBlocks.GetBlock(customBlock);
 					
 					if (block != null)
 					{

@@ -3,7 +3,7 @@ package com.brokenmatrix.modcore.blocks;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Blocks
+public final class CustomBlocks
 {
 	private static List<CustomBlock> Blocks;
 	
