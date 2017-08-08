@@ -29,5 +29,6 @@ public class CustomColorableBlock extends CustomBlock
 			c.setColor(color);
 		}
 		state.setData(data);
+		state.update();
 	}
 }
