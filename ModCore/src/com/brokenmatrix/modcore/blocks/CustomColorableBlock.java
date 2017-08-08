@@ -12,12 +12,14 @@ public class CustomColorableBlock extends CustomBlock
 	public CustomColorableBlock(String name, Material material, byte color, CustomDrop... drops)
 	{
 		super(name, material, drops);
+		
+		this.color = color;
 	}
 	
 	@SuppressWarnings("deprecation")
 	@Override
 	public void onPlace(BlockPlaceEvent e)
 	{
-		e.getPlayer().getWorld().getBlockAt(e.getBlock().getLocation()).getState().getData().setData(color);
+		e.getPlayer().getWorld().getBlockAt(e.getBlock().getLocation()).setData(color);
 	}
 }

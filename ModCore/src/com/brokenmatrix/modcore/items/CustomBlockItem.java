@@ -18,7 +18,7 @@ public class CustomBlockItem extends CustomItem
 	
 	public CustomBlockItem(String name, Material base, CustomBlock block, boolean dropsSelf, String... lore)
 	{
-		this(name, base, block, dropsSelf, 1, lore);
+		this(name, base, block, dropsSelf, 64, lore);
 	}
 	
 	public CustomBlock getBlock()
