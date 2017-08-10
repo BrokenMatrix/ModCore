@@ -173,6 +173,7 @@ public class EventListener implements Listener
 	@EventHandler
 	public void onPlayerInteract(PlayerInteractEvent e)
 	{
+		System.out.println("interact");
 		if (!e.isCancelled() && e.hasItem())
 		{
 			CustomItem item = Helper.GetItem(e.getItem());
