@@ -65,7 +65,7 @@ public final class DataStorage
 			CustomBlocks.put(new Location(world, x, y, z), id);
 		}
 		
-		for (String s : customBlocks)
+		for (String s : extraBlockData)
 		{
 			String[] parts = s.split(",");
 			int x = Integer.parseInt(parts[1]);
